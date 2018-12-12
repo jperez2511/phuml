@@ -52,7 +52,7 @@ class plPhuml
 
     public function addProcessor( $processor ) 
     {
-        if ( count( $this->processors ) === 0 ) 
+        if ( empty( $this->processors ) ) 
         {
             // First processor must support application/phuml-structure
             if ( !in_array( 'application/phuml-structure', $processor->getInputTypes() ) ) 

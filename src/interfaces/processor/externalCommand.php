@@ -7,9 +7,11 @@ abstract class plExternalCommandProcessor extends plProcessor
 
     public function process( $input, $type ) 
     {
+        $tmpDir = 'C:\Users\userName\Desktop';
+
         // Create temporary datafiles
-        $infile  = tempnam( '/tmp', 'phuml' );
-        $outfile = tempnam( '/tmp', 'phuml' );
+        $infile  = tempnam( $tmpDir, 'phuml' );
+        $outfile = tempnam( $tmpDir, 'phuml' );
         
         file_put_contents( $infile, $input );
 
